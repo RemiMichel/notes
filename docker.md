@@ -19,5 +19,5 @@ ln -s ${DESTINATION}/docker/ /var/lib/
 # redémarage du service docker
 systemctl start docker
 ```
-Merci la source  
+Merci la source :ocean:  
 Source : https://unix.stackexchange.com/questions/414483/docker-increase-available-disk-space

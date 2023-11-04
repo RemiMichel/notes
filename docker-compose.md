@@ -10,8 +10,8 @@ docker network create ${NOM_DE_MON_RESEAU}
 Attribuer le réseau dans les docker-compose.yml concernés comme ceci :
 ```yaml
 services:
-  database:
-    image: ubuntu:latest
+  service:
+    image: ...
     networks:
       - mon_network
 

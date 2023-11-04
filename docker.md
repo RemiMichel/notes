@@ -1,10 +1,18 @@
 # Docker
 
-## Verifier les configurations d'un docker-compose.yml
+## Secret Docker
+**Les secrets Docker fonctionne uniquement en mode Swarm.**  
+_Voir les notes sur Docker Swarm_
+### Géneration
 ```shell
-docker compose config
+# Générer un secret depuis une chaîne de caractères
+printf "${MON_SECRET}" | docker secret create ${NOM_DU_SECRET} -
+# Générer un secret depuis un fichier
+docker secret create ${NOM_DU_SECRET} ${PATH_DU_FICHIER}
 ```
-Cela va interpreter le .env pour lire le docker-compose.yml
+### Localisation des fichiers de secret
+`/run/secrets/<NOM_DU_SECRET>`
+
 ## Relocalisation du répertoire /vat/lib/docker
 
 _**Problème d'espace disque avec Docker**_   

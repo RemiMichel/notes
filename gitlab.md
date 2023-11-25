@@ -17,7 +17,7 @@ Source : https://stackoverflow.com/questions/55747402/docker-gitlab-change-forgo
 Lors de l'exécution d'un job le runner sera déployer dans un réseau isolé.  
 Voici comment on le relit à un réseau docker existant :
 - Éditez le fichier à l'emplacement `/etc/gitlab-runner/config.toml`
-- Ajouter la ligne suivante dans `[runners.docker]`  
+- Ajoutez la ligne suivante dans `[runners.docker]`  
 ```shell
   network_mode = "<MON_RESEAU_DOCKER>"
 ```
